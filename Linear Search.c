@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int array[100],i,search,n;
+	int array[100],i,search,n,count=0;
 
 	printf("Enter elements in Array =");
 	scanf("%d",&n); //input a Number 
@@ -21,13 +21,14 @@ int main()
 		if(array[i]==search)
 		{
 			printf("%d is present at =%d\n",search,i+1);
-			break;
+			count++;
 		}
 		
 		
-		if (i==n)
+		if (count==0)
 		{
 			printf("Error");
+      break;
 		}
 		
 
