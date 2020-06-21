@@ -1,37 +1,37 @@
 #include<stdio.h>
 int main()
 {
-	int array[100],i,search,n,count=0;
+    int n,arra[100],count=0,i,search;
 
-	printf("Enter elements in Array =");
-	scanf("%d",&n); //input a Number 
+    printf("Enter elements in Array: ");
+    scanf("%d",&n);
 
-	for(i=0;i<n;i++)
-	{
-		scanf("%d",&array[i]); //Array elements input 
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arra[i]);
+    }
 
-	}
+    printf("Enter the number you want to search");
+    scanf("%d",&search);
 
-	printf("Enter the Number you want to search");
-	scanf("%d",&search); //input the number you want to search
+    for(i=0;i<n;i++)
+    {
+        if(arra[i]==search)
+        {
+            printf("%d is present at location %d.\n", search, i+1);
+            count++;
+        }
 
+    }
 
-	for(i=0;i<n;i++)
-	{
-		if(array[i]==search)
-		{
-			printf("%d is present at =%d\n",search,i+1);
-			count++;
-		}
-		
-		
-		if (count==0)
-		{
-			printf("Error");
-      break;
-		}
-		
+    if(count==0)
+    {
+        printf("Error");
+    }
 
-	}
-
+    else
+    {
+        printf("%d is present %d times in the array.\n",search,count);
+    }
+    
 }
